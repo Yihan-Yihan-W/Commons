@@ -5,7 +5,7 @@
 import os
 
 DATADIR = ""
-DATAFILE = "beatles-diskography.csv"  ## change file here
+DATAFILE = " #### FILENAME ###  "  ## change file here
 
 
 def parse_file(datafile):
