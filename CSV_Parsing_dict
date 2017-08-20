@@ -1,5 +1,6 @@
 # Read the input DATAFILE line by line, and for the first 10 lines (not including the header)
 # split each line on "," and then for each line, create a dictionary
+# without CSV module
 
 import os
 
@@ -42,3 +43,18 @@ def test():
 
     
 test()
+
+
+###### with CSV module, CSV assumes first row as header ######
+import csv
+
+def parse_csv(datafile):
+    data = []
+    n = 0
+    with open(datafile, 'rb') as sd:
+    r = csv.DictReader(sd)
+    
+    for line in r:
+        data.append(line)
+    
+    return data
